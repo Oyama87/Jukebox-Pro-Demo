@@ -11,8 +11,33 @@ body {
   border-bottom: 1px solid rgba(255,255,255,0.7);
 }
 
-/* #sideBarContainer {
-  position: 'fixed';
-  left: 1%;
-  top: 15%;
-} */
+#albumTitle {
+  text-shadow: 4px 4px 4px rgba(0,0,0,0.6);
+}
+
+.aSong {
+  background-color: rgba(20,20,20,0.4);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0.75em;
+  border-bottom: 1px solid black !important;
+  width: 100%;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.aSong:hover {
+  background-color: black;
+}
+
+#Controller {
+  width: 80%;
+  padding: 1% 0;
+  background-color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#Controller:hover {
+  background-color: green;
+}

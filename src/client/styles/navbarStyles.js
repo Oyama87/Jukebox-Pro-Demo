@@ -8,5 +8,5 @@ export default {
   color: 'white',
   fontSize: '1.3em',
   fontWeight: 'bold',
-  textShadow: '0.7em 0.7em 0.7em rgba(0,0,0,0.8)'
+  textShadow: '0.4em 0.4em 0.4em rgba(0,0,0,0.8)'
 } 
