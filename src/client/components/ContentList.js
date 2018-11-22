@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/contentStyles';
-import ItemScroller from './ItemScroller.js'
+import ListScroller from './ListScroller.js'
 
 export default function ContentList (props) {
   const 
@@ -10,7 +10,7 @@ export default function ContentList (props) {
     return (
     <div style={containerStyles}>
       <h1 id='albumTitle'>Album: {title}</h1>
-      <ItemScroller 
+      <ListScroller 
         list={songList} 
         rowClass='aSong' 
         containerId='songScroller' 

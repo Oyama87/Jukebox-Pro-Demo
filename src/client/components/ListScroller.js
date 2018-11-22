@@ -1,17 +1,12 @@
 import React from 'react';
 
 const defaultStyles = {
-  width: '80%',
-  height: '60%',
   overflow: 'scroll',
-  border: '1px solid black',
-  borderRadius: '10px',
-  padding: 0,
-  boxShadow: '8px 8px 8px rgba(0,0,0,0.2)',
 }
 
 export default function ListScroller (props) {
   const { list, rowClass, containerId, customStyles } = props;
+  
   return (
     <ul style={Object.assign(defaultStyles, customStyles)} id={containerId} >
       {
