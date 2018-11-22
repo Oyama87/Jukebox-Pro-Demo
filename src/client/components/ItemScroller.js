@@ -10,19 +10,19 @@ const defaultStyles = {
   boxShadow: '8px 8px 8px rgba(0,0,0,0.2)',
 }
 
-export default function SongScroller (props) {
-  const { songList } = props;
+export default function ListScroller (props) {
+  const { list, rowClass, containerId, customStyles } = props;
   return (
-    <ul style={defaultStyles} >
+    <ul style={Object.assign(defaultStyles, customStyles)} id={containerId} >
       {
-        songList.map(song => {
+        list.map(item => {
           return (
             <li 
-            key={song.id} 
-            className='aSong'
+              key={list.id} 
+              className={rowClass}
             >
-          Song: {song.name}
-          </li>
+              {item.name}
+            </li>
           )
         })
       }
