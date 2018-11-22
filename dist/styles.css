@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(50,50,50.8); 
+}
+
+.sidebarItem:hover, header:hover {
+  background-color: rgba(75,75,75,0.3);
+  border-radius: 10px;
+  border-top: 1px solid rgba(255,255,255,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+
+/* #sideBarContainer {
+  position: 'fixed';
+  left: 1%;
+  top: 15%;
+} */
