@@ -2,6 +2,8 @@ import React from 'react';
 
 const defaultStyles = {
   overflow: 'scroll',
+  textAlign: 'center',
+  padding: 0
 }
 
 export default function ListScroller (props) {
