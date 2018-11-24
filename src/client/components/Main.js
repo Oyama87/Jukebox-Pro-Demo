@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import Navbar from './Navbar.js'
 import Sidebar from './Sidebar.js'
 import ContentList from './ContentList.js'
-import data from '../data.js'
+import data from '../../../data.js'
 
 
 export default class Main extends Component {

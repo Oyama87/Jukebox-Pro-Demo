@@ -3,7 +3,8 @@ import React from 'react';
 const defaultStyles = {
   overflow: 'scroll',
   textAlign: 'center',
-  padding: 0
+  padding: 0,
+  cursor: 'pointer'
 }
 
 export default function ListScroller (props) {
