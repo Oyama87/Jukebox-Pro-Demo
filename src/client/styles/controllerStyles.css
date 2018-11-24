@@ -1,0 +1,36 @@
+.controlContainer {
+  width: 80%;
+  background-color: black;
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: 'center';
+  box-shadow: 0.5em 0.5em 0.5em rgba(0,0,0,0.4);
+}
+
+.controlButton {
+  flex: 1;
+  margin: 0;
+  padding: 2%;
+  font-size: 1.3em;
+}
+
+.controlButton:hover {
+  background-color: green;
+}
+
+#prevButton {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#playButton {
+  border-radius: 0;
+  border-left: 2px solid green;
+  border-right: 2px solid green;
+}
+
+#nextButton {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

@@ -8,59 +8,31 @@
     name: 'and'
   },
   {
-    id: 2,
-    name: 'and'
+    id: 4,
+    name: 'goodbye'
   },
   {
-    id: 2,
-    name: 'and'
+    id: 5,
+    name: 'goodbye'
   },
   {
-    id: 2,
-    name: 'and'
+    id: 6,
+    name: 'goodbye'
   },
   {
-    id: 2,
-    name: 'and'
+    id: 7,
+    name: 'goodbye'
   },
   {
-    id: 2,
-    name: 'and'
+    id: 8,
+    name: 'goodbye'
   },
   {
-    id: 2,
-    name: 'and'
+    id: 9,
+    name: 'goodbye'
   },
   {
-    id: 2,
-    name: 'and'
-  },
-  {
-    id: 2,
-    name: 'and'
-  },
-  {
-    id: 2,
-    name: 'and'
-  },
-  {
-    id: 2,
-    name: 'and'
-  },
-  {
-    id: 2,
-    name: 'and'
-  },
-  {
-    id: 2,
-    name: 'and'
-  },
-  {
-    id: 2,
-    name: 'and'
-  },
-  {
-    id: 3,
+    id: 10,
     name: 'goodbye'
   }
 ]

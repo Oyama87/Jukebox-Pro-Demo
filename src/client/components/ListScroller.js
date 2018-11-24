@@ -18,7 +18,7 @@ export default function ListScroller (props) {
         list.map(item => {
           return (
             <li 
-              key={list.id} 
+              key={item.id} 
               className={rowClass}
             >
               {item.name}

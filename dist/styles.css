@@ -2,17 +2,5 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgba(50,50,50.8); 
-}
-
-
-#Controller {
-  width: 80%;
-  padding: 1% 0;
-  background-color: black;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-#Controller:hover {
-  background-color: green;
+  /* background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,255,0,0.7)); */
 }

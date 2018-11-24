@@ -1,10 +1,11 @@
 import React from 'react';
-import ListScroller from './ListScroller.js'
+import ListScroller from './ListScroller.js';
+import Controller from './Controller.js'
 import '../styles/contentStyles.css';
 import '../styles/songStyles.css';
 
 const titleStyle = {
-  textShadow: '4px 4px 4px rgba(0,0,0,0.6)'
+  textShadow: '0.35em 0.35em 0.35em rgba(0,0,0,0.8)'
 }
 
 export default function ContentList (props) {
@@ -19,9 +20,7 @@ export default function ContentList (props) {
         rowClass='aSong' 
         containerClass='songScroller' 
       /> 
-      <div id="Controller">
-        <h2>Play</h2>
-      </div>
+      <Controller />
     </div>
   )
 }
