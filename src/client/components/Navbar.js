@@ -1,9 +1,9 @@
 import React from 'react'
-import styles from '../styles/navbarStyles';
+import '../styles/navbarStyles.css';
 
 export default function Navbar(props) {
   return (
-    <nav style={styles}>
+    <nav className='navbar'>
       <h1>{props.title}</h1>
     </nav>
   )

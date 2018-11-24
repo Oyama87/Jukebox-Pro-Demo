@@ -1,0 +1,19 @@
+.albumScroller {
+  width: 70%;
+  height: 60%;
+  overflow: scroll;
+}
+
+.anAlbum {
+  box-sizing: border-box;
+  width: 100%;
+  list-style-type: none;
+  padding: 0.75em;
+}
+
+.anAlbum:hover {
+  background-color: rgba(75,75,75,0.3);
+  border-radius: 10px;
+  border-top: 1px solid rgba(255,255,255,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.7);
+}

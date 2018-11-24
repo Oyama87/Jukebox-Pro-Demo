@@ -4,7 +4,7 @@ import Navbar from './Navbar.js'
 import Sidebar from './Sidebar.js'
 import ContentList from './ContentList.js'
 import data from '../../../data.js'
-
+import albumData from '../../../album_data.js'
 
 export default class Main extends Component {
   constructor() {
@@ -23,7 +23,7 @@ export default class Main extends Component {
     return (
       <div>
         <Navbar title={this.state.navTitle} />
-        <Sidebar headerText={this.state.sideBarHeader}/>
+        <Sidebar headerText={this.state.sideBarHeader} list={albumData}/>
         <ContentList album={this.state.album}/>
       </div>
     )

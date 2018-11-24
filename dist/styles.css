@@ -4,60 +4,6 @@ body {
   background-color: rgba(50,50,50.8); 
 }
 
-.sidebarItem:hover, header:hover {
-  background-color: rgba(75,75,75,0.3);
-  border-radius: 10px;
-  border-top: 1px solid rgba(255,255,255,0.7);
-  border-bottom: 1px solid rgba(255,255,255,0.7);
-}
-
-#albumTitle {
-  text-shadow: 4px 4px 4px rgba(0,0,0,0.6);
-}
-
-#songScroller {
-  width: 80%;
-  height: 60%;
-  border: 1px solid black;
-  border-radius: 10px;
-  padding: 0;
-  box-shadow: 8px 8px 8px rgba(0,0,0,0.2);
-}
-
-.aSong {
-  background-color: rgba(20,20,20,0.4);
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0.75em;
-  border-bottom: 1px solid black !important;
-  width: 100%;
-  list-style-type: none;
-  cursor: pointer;
-}
-
-.aSong:hover {
-  background-color: black;
-}
-
-#albumScroller {
-  width: 70%;
-  height: 60%;
-}
-
-.anAlbum {
-  box-sizing: border-box;
-  width: 100%;
-  list-style-type: none;
-  padding: 0.75em;
-}
-
-.anAlbum:hover {
-  background-color: rgba(75,75,75,0.3);
-  border-radius: 10px;
-  border-top: 1px solid rgba(255,255,255,0.7);
-  border-bottom: 1px solid rgba(255,255,255,0.7);
-}
-
 
 #Controller {
   width: 80%;

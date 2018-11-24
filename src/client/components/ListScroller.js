@@ -8,10 +8,12 @@ const defaultStyles = {
 }
 
 export default function ListScroller (props) {
-  const { list, rowClass, containerId, customStyles } = props;
+  const { list, rowClass, containerClass, customStyles } = props;
   
   return (
-    <ul style={Object.assign(defaultStyles, customStyles)} id={containerId} >
+    <ul 
+      style={Object.assign(defaultStyles, customStyles)} 
+      className={containerClass}>
       {
         list.map(item => {
           return (

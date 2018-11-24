@@ -1,0 +1,31 @@
+.container {
+    position: fixed;
+    left: 1%;
+    top: 15%;
+    width: 15%;
+    height: 50%;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.15);
+    color: rgba(255,255,255,0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%
+  }
+  
+.header {
+  font-size: 1.6em;
+  text-shadow: 0.4em 0.4em 0.4em rgba(0,0,0,0.8);
+  cursor: pointer;
+  line-height: 3em;
+  width: 100%;
+  text-align: center;
+}
+
+.header:hover {
+  background-color: rgba(75,75,75,0.3);
+  border-radius: 10px;
+  border-top: 1px solid rgba(255,255,255,0.7);
+  border-bottom: 1px solid rgba(255,255,255,0.7);
+}

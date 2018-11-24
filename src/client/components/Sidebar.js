@@ -1,34 +1,17 @@
-import React from 'react'
-import styles from '../styles/SidebarStyles.js';
-import ListScroller from './ListScroller.js'
-import data from './data.js'
-
-const { containerStyles, headerStyles, /*listStyles, itemStyles*/} = styles;
+import React from 'react';
+import ListScroller from './ListScroller.js';
+import '../styles/sidebarStyles.css';
+import '../styles/albumStyles.css';
 
 export default function Sidebar (props) {
+  const { headerText, list } = props;
    return (
-     <div id='sidebarContainer' style={containerStyles}>
-       <header style={headerStyles}>{props.headerText}</header>
+     <div id='sidebarContainer' className='container'>
+       <header className='header'>{headerText}</header>
        <ListScroller 
-        list={data} 
-        rowClass='anAlbum' 
-        containerId='albumScroller' />
+        list={list} 
+        rowClass='anAlbum'
+        containerClass='albumScroller' />
      </div>
    )
  }
-
-      //  <ul style={listStyles}>
-      //    {
-      //       data.map(item => {
-      //         return (
-      //           <li 
-      //             key={item.id} 
-      //             style={itemStyles}
-      //             className='sidebarItem'
-      //           >
-      //             {item.title}
-      //           </li>
-      //         )
-      //       })
-      //    }
-      //  </ul>
