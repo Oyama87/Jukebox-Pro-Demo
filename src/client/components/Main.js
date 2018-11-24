@@ -10,9 +10,10 @@ export default class Main extends Component {
   constructor() {
     super()
     this.state = {
-      sideBarHeader: 'Placeholder',
+      sideBarHeader: 'Albums',
       navTitle: 'Jukebox Pro',
-      album: {
+      albums: albumData,
+      selectedAlbum: {
         title: '10,000 Days',
         songList: data
       }
@@ -23,8 +24,10 @@ export default class Main extends Component {
     return (
       <div>
         <Navbar title={this.state.navTitle} />
-        <Sidebar headerText={this.state.sideBarHeader} list={albumData}/>
-        <ContentList album={this.state.album}/>
+        <Sidebar 
+          headerText={this.state.sideBarHeader} 
+          list={this.state.albums} />
+        <ContentList album={this.state.selectedAlbum}/>
       </div>
     )
   }
