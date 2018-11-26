@@ -9,13 +9,14 @@ const defaultStyles = {
 
 export default function ListScroller (props) {
   const { list, rowClass, containerClass, customStyles } = props;
-  
+  // console.log(list)
   return (
     <ul 
       style={Object.assign(defaultStyles, customStyles)} 
       className={containerClass}>
       {
         list.map(item => {
+          console.log(item)
           return (
             <li 
               key={item.id} 

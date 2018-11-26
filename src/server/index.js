@@ -1,17 +1,28 @@
 const express = require('express');
 const app = express()
-const albumRouter = require('./routes/api/albumRouter.js');
 const path = require('path');
 const volleyball = require('volleyball');
-
+const albumRouter = require('./routes/api/albumRouter.js');
+const { db } = require('./db');
+const PORT = 3000;
 
 app.use(volleyball);
 app.use(express.static(path.join(__dirname, '..', '..', 'dist')));
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
 
 app.get('/', (req,res,next) => {
   res.sendFile(path.join(__dirname, '..', '..', 'dist', 'index.html'))
 })
 
-app.get('/api/albums', albumRouter);
+app.use('/api/albums', albumRouter);
 
-module.exports = app;
+app.use((req,res,next) => {
+  res.status(404).send("That's a 404.");
+})
+
+db.sync()
+  .then(app.listen(PORT, ()=> console.log(`Database synced, JukeboxPro listening on port ${PORT}`)));
+
+// module.exports = app;

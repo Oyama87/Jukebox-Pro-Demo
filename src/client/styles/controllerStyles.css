@@ -12,11 +12,13 @@
   flex: 1;
   margin: 0;
   padding: 2%;
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 
 .controlButton:hover {
   background-color: green;
+  color: black;
+
 }
 
 #prevButton {

@@ -1,7 +1,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/client/components/Main.js',
+  entry: ['babel-polyfill', './src/client'],
   resolve: {
     extensions: ['*', '.js', '.jsx']
   },
