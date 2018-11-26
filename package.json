@@ -1,7 +1,7 @@
 {
   "name": "SoloJuke",
   "version": "1.0.0",
-  "description": "",
+  "description": "Juke(Spotify) front end from the ground up.",
   "main": "index.js",
   "scripts": {
     "start": "webpack -w --config ./webpack.config.js --mode development & npm run start-server",

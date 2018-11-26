@@ -9,14 +9,13 @@ const titleStyle = {
 }
 
 export default function ContentList (props) {
-  const 
-    { title, songList } = props.album;
+  const { album, title } = props;
   
     return (
     <div className='containerStyles'>
       <h1 style={titleStyle}>Album: {title}</h1>
       <ListScroller 
-        list={songList} 
+        list={album} 
         rowClass='aSong' 
         containerClass='songScroller' 
       /> 

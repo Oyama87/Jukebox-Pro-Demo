@@ -8,7 +8,7 @@ const defaultStyles = {
 }
 
 export default function ListScroller (props) {
-  const { list, rowClass, containerClass, customStyles } = props;
+  const { list, rowClass, containerClass, customStyles, clickHandler } = props;
   // console.log(list)
   return (
     <ul 
@@ -16,11 +16,12 @@ export default function ListScroller (props) {
       className={containerClass}>
       {
         list.map(item => {
-          console.log(item)
+          // console.log(item)
           return (
             <li 
               key={item.id} 
               className={rowClass}
+              onClick={() => clickHandler(item.id)}
             >
               {item.name}
             </li>

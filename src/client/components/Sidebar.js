@@ -4,14 +4,15 @@ import '../styles/sidebarStyles.css';
 import '../styles/albumStyles.css';
 
 export default function Sidebar (props) {
-  const { headerText, list } = props;
+  const { headerText, list, selectAlbum } = props;
    return (
      <div id='sidebarContainer' className='container'>
        <header className='header'>{headerText}</header>
        <ListScroller 
         list={list} 
         rowClass='anAlbum'
-        containerClass='albumScroller' />
+        containerClass='albumScroller' 
+        clickHandler={selectAlbum} />
      </div>
    )
  }
