@@ -4,7 +4,6 @@ const { Album, Song, Artist } = require('../../db');
 
 router.get('/', async (req,res,next) => {
     try {
-      console.log('----- ROUTE HIT -----');
       let albums = await Album.findAll({
         include: {
           model: Artist,
@@ -37,7 +36,6 @@ router.get('/:albumId/songs', async (req,res,next) => {
       }
     })
     if(songs) {
-      console.log('----- ROUTE HIT -----');
       res.json(songs);
     }
     else res.status(404).send('Nope, 404.');

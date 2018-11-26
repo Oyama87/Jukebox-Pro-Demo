@@ -15,7 +15,7 @@ export default function ListScroller (props) {
       style={Object.assign(defaultStyles, customStyles)} 
       className={containerClass}>
       {
-        list.map(item => {
+        list.map((item, i) => {
           // console.log(item)
           return (
             <li 
@@ -23,7 +23,7 @@ export default function ListScroller (props) {
               className={rowClass}
               onClick={() => clickHandler(item.id)}
             >
-              {item.name}
+            {item.name}
             </li>
           )
         })

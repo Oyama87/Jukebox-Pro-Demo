@@ -17,7 +17,11 @@
   justify-content: space-evenly;
   align-items: center;
 }
-                                
+
+.albumArt {
+  height: 300px;
+  width: 350px;
+}
 
 
 

@@ -16,9 +16,14 @@ export default class Main extends Component {
       selectedAlbum: {}
     }
     this.selectAlbum = this.selectAlbum.bind(this);
+    this.getAlbums = this.getAlbums.bind(this);
   }
   
   async componentDidMount() {
+    await this.getAlbums();
+  }
+  
+  async getAlbums() {
     try {
       let albums = await axios.get('api/albums');
       // console.log(albums);
@@ -31,13 +36,17 @@ export default class Main extends Component {
     }
   }
   
+  
+  
   async selectAlbum(albumId) {
     let album = await axios.get(`/api/albums/${albumId}`);
     let albumSongs = await axios.get(`/api/albums/${albumId}/songs`);
-    // console.dir(albumSongs.data);
+    // console.dir(album.data);
     this.setState({
       selectedAlbum: {
         title: album.data.name,
+        id: album.data.id,
+        artworkUrl: album.data.artworkUrl,
         songList: albumSongs.data
       }
     })
@@ -49,11 +58,13 @@ export default class Main extends Component {
         <Navbar title={this.state.navTitle} />
         <Sidebar 
           headerText={this.state.sideBarHeader} 
+          headerClickHandler={()=> this.setState({ selectedAlbum: {} })}
           list={this.state.albums} 
           selectAlbum={this.selectAlbum}/>
         <ContentList 
           album={this.state.selectedAlbum.songList || this.state.albums}
-          title={this.state.selectedAlbum.title || 'Albums'} />
+          title={this.state.selectedAlbum.title || 'All'}
+          imageSrc={this.state.selectedAlbum.artworkUrl} />
       </div>
     )
   }

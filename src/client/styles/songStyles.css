@@ -1,6 +1,6 @@
 .songScroller {
   width: 80%;
-  height: 60%;
+  max-height: 20%;
   border: 1px solid black;
   border-radius: 10px;
   padding: 0;

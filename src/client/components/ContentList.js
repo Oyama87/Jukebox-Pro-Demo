@@ -9,11 +9,12 @@ const titleStyle = {
 }
 
 export default function ContentList (props) {
-  const { album, title } = props;
+  const { album, title, imageSrc } = props;
   
     return (
     <div className='containerStyles'>
       <h1 style={titleStyle}>Album: {title}</h1>
+      {imageSrc ? <img src={imageSrc} className='albumArt' /> : null}
       <ListScroller 
         list={album} 
         rowClass='aSong' 
