@@ -1,6 +1,7 @@
 import React from 'react';
 import SongScroller from './SongScroller.js';
-import Controller from './Controller.js'
+import Controller from './Controller.js';
+import AlbumView from './AlbumView.js';
 import '../styles/contentStyles.css';
 import '../styles/songStyles.css';
 
@@ -26,14 +27,18 @@ export default function ContentList (props) {
           :
           null
       }
-      
-      <SongScroller 
-        list={album} 
-        rowClass='aSong' 
-        containerClass='songScroller' 
-        clickHandler={selectSong}
-        selectedItem={selectedSong}
-      /> 
+      {
+        props.selectedAlbum.id ?
+        <SongScroller 
+          list={album} 
+          rowClass='aSong' 
+          containerClass='songScroller' 
+          clickHandler={selectSong}
+          selectedItem={selectedSong}
+        />
+        :
+        <AlbumView list={props.albums}  />
+      }
       <Controller 
         playPauseBtn={props.playPauseBtn}
         isPlaying={props.isPlaying} />

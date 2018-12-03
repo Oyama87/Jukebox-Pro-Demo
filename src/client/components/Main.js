@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Navbar from './Navbar.js'
 import Sidebar from './Sidebar.js'
 import ContentList from './ContentList.js'
+import AlbumView from './AlbumView.js'
+import Controller from './Controller.js'
 import  axios from 'axios'
 
 const audio = document.createElement('audio')
@@ -97,14 +99,17 @@ export default class Main extends Component {
           list={this.state.albums} 
           selectAlbum={this.selectAlbum}
           selectedAlbum={this.state.selectedAlbum} />
+          
         <ContentList 
-          album={this.state.selectedAlbum.songList || this.state.albums}
-          title={this.state.selectedAlbum.title || 'Albums'}
+          album={this.state.selectedAlbum.songList}
+          albums={this.state.albums}
+          title={this.state.selectedAlbum.title}
           imageSrc={this.state.selectedAlbum.artworkUrl} 
           selectSong={this.loadAudio}
           selectedSong={this.state.selectedSong}
           playPauseBtn={this.playOrPause} 
-          isPlaying={this.state.songIsPlaying} />
+          isPlaying={this.state.songIsPlaying}
+          selectedAlbum={this.state.selectedAlbum} />
       </div>
     )
   }

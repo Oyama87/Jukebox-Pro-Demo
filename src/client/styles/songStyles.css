@@ -22,7 +22,7 @@
 }
 
 .aSong:hover {
-  background-color: black;
+  background-color: rgba(0,0,0,0.2);
 }
 
 .aSong.active {
@@ -31,5 +31,5 @@
 
 .aSong.active .selected {
   color: green;
-  margin-right: 1%;
+  margin-right: 10px;
 }

@@ -1,12 +1,17 @@
-import React, { Component } from 'react'
+import React from 'react'
+import '../styles/albumImageStyles.css'
 
-export default class AlbumView extends Component {
-  
-  render() {
-    return (
-      <div>
-        <p>Hello</p>
-      </div>
-    )
-  }
+export default function AlbumView(props) {
+  return (
+    <div id='albumViewContainer'>
+      {
+        props.list.map(item => {
+          return <img 
+            key={item.id} 
+            src={item.artworkUrl} 
+            className='albumImg' />
+        })
+      }
+    </div>
+  )
 }

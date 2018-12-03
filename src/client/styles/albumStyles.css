@@ -28,6 +28,6 @@
 
 .anAlbum.active .selected {
     color: green;
-    margin-right: 3%;
+    margin-right: 10px;
     text-shadow: 0.15em 0.15em 0.15em black 
   }
