@@ -15,3 +15,16 @@ export default [
   {name: 'Jambi', id: 14},
   {name: 'Jambi', id: 15},
 ]
+
+[
+  {
+    "artistId" : 1,
+    "albumId" : 1,
+    "id" : 1,
+    "updatedAt" : "2018-11-16 15:26:02.491-05",
+    "createdAt" : "2018-11-16 15:26:02.491-05",
+    "genre" : "Instrumental",
+    "name" : "The Tea Party",
+    "audioUrl" : "https:\/\/storage.googleapis.com\/juke-1379.appspot.com\/juke-music\/Dexter%20Britain\/Creative%20Commons%20Volume%202\/01%20The%20Tea%20Party.mp3"
+  }
+]

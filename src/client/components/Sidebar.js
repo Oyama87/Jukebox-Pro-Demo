@@ -1,20 +1,22 @@
 import React from 'react';
-import ListScroller from './ListScroller.js';
+import AlbumScroller from './AlbumScroller.js';
 import '../styles/sidebarStyles.css';
 import '../styles/albumStyles.css';
 
 export default function Sidebar (props) {
-  const { headerText, list, selectAlbum, headerClickHandler } = props;
+  const { headerText, list, selectAlbum, selectedAlbum, headerClickHandler } = props;
    return (
      <div id='sidebarContainer' className='container'>
        <header
          className='header'
-         onClick={headerClickHandler}>{headerText}</header>
-       <ListScroller 
+         onClick={headerClickHandler}>{headerText}
+       </header>
+       <AlbumScroller 
         list={list} 
         rowClass='anAlbum'
         containerClass='albumScroller' 
-        clickHandler={selectAlbum} />
+        clickHandler={selectAlbum}
+        selectedItem={selectedAlbum} />
      </div>
    )
  }

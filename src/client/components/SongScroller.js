@@ -7,23 +7,27 @@ const defaultStyles = {
   cursor: 'pointer'
 }
 
-export default function ListScroller (props) {
-  const { list, rowClass, containerClass, customStyles, clickHandler } = props;
-  // console.log(list)
+export default function SongScroller (props) {
+  const { 
+    list, rowClass, containerClass, 
+    customStyles, selectedItem, clickHandler 
+  } = props
+    
   return (
     <ul 
       style={Object.assign(defaultStyles, customStyles)} 
       className={containerClass}>
       {
-        list.map((item, i) => {
-          // console.log(item)
+        list.map((song) => {
+          const matched = selectedItem.id === song.id
           return (
             <li 
-              key={item.id} 
-              className={rowClass}
-              onClick={() => clickHandler(item.id)}
-            >
-            {item.name}
+              key={song.id} 
+              className={`${rowClass} ${matched ? 'active' : ''}`}
+              onClick={()=> clickHandler(song)} 
+              >
+              <i className={matched ? 'selected fas fa-play-circle' : ''} />
+              {song.name}
             </li>
           )
         })

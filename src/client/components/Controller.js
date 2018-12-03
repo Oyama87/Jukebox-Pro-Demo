@@ -7,11 +7,14 @@ export default function Controller(props) {
       <p className='controlButton' id='prevButton'>
         <i className='fas fa-step-backward' />
       </p>
-      <p className='controlButton fas play-circle' id='playButton'>
-      <i className='fas fa-play' />
+      <p 
+        className='controlButton fas play-circle' 
+        id='playButton'
+        onClick={props.playPauseBtn}>
+        <i className={props.isPlaying ? 'fas fa-pause' :'fas fa-play'} />
       </p>
       <p className='controlButton' id='nextButton'>
-      <i className='fas fa-step-forward' />
+        <i className='fas fa-step-forward' />
       </p>
     </div>
   )

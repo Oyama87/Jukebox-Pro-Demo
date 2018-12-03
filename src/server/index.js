@@ -23,6 +23,6 @@ app.use((req,res,next) => {
 })
 
 db.sync()
-  .then(app.listen(PORT, ()=> console.log(`Database synced, JukeboxPro listening on port ${PORT}`)));
+  .then(app.listen(PORT, ()=> console.log(`\n***********\n\nDatabase synced, JukeboxPro listening on port ${PORT}\n\n***********\n`)));
 
 // module.exports = app;

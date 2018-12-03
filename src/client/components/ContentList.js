@@ -1,5 +1,5 @@
 import React from 'react';
-import ListScroller from './ListScroller.js';
+import SongScroller from './SongScroller.js';
 import Controller from './Controller.js'
 import '../styles/contentStyles.css';
 import '../styles/songStyles.css';
@@ -9,18 +9,34 @@ const titleStyle = {
 }
 
 export default function ContentList (props) {
-  const { album, title, imageSrc } = props;
+  const { album, title, imageSrc, selectSong, selectedSong } = props;
   
     return (
     <div className='containerStyles'>
-      <h1 style={titleStyle}>Album: {title}</h1>
-      {imageSrc ? <img src={imageSrc} className='albumArt' /> : null}
-      <ListScroller 
+      <h1 style={titleStyle}>{title}</h1>
+      {
+        imageSrc ? 
+          <img src={imageSrc} className='albumArt' /> 
+          : null
+      }
+      
+      {
+        props.selectedSong.name ? 
+          <p className='nowPlaying'>{`Now playing: ${props.selectedSong.name}`}</p>
+          :
+          null
+      }
+      
+      <SongScroller 
         list={album} 
         rowClass='aSong' 
         containerClass='songScroller' 
+        clickHandler={selectSong}
+        selectedItem={selectedSong}
       /> 
-      <Controller />
+      <Controller 
+        playPauseBtn={props.playPauseBtn}
+        isPlaying={props.isPlaying} />
     </div>
   )
 }

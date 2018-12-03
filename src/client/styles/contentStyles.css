@@ -21,7 +21,10 @@
 .albumArt {
   height: 300px;
   width: 350px;
+  box-shadow: 8px 8px 8px rgba(0,0,0,0.9);
+  border-radius: 10px
 }
 
-
-
+.nowPlaying {
+  font-style: italic
+}
